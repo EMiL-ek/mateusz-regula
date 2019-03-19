@@ -1,46 +1,60 @@
 <!DOCTYPE HTML>
 <html lang="pl">
+
 <head>
 	<meta charset="utf-8" />
 	<title>Home - Retreect</title>
 	<meta name="description" content="Serwis prezentuje nasze plany dotyczące animacji i aplikacji komputerowych." />
 	<meta name="keywords" content="top 5, project, image, video, animations, animacje, drawing, games, best, poland, polska" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/png" href="favicon.png">
 </head>
-
 <body>
-<body id="index">
-
-	<div id="container">
-	
-		<div id="logo"> 
-                <img src="logo.png" width="25%" height="auto">
-		</div>
-	
-		<div id="nav">
-                  <li><a href="link1.html">STRONA GŁÓWNA</a></li>
-                  <li><a href="link1.html">AKTULNOŚCI</a></li>
-                  <li><a href="link1.html">GALERIA</a></li>
-                  <li><a href="link1.html">UNIWERSA</a></li>
-                  <li><a href="link1.html">SKLEP</a></li>
-                  <li><a href="link1.html">ZLECENIA</a></li>
-                  <li><a href="link1.html">KONTAKT</a></li>  
-		</div>
-		
-		<div id="content"><h1>Witamy na naszej stronie.</h1>
-		</div>
-		
-		
-		
-		<div id="footer">
-                &copy; Wszelkie prawa zastrzeżone 2018-00-00
-		</div>
-	
-	</div>
-
+	<div class="wrapper">
+	<h1 class="main-heading"><img src="logo.png" alt="Retreect"></h1>
+	<nav class="main-nav">
+        <ul class="nav-list">
+			<li class="li1"><a href=""> Strona Główna</a></li>
+			<li class="li1"><a href="">Aktualności</a></li>
+			<li class="li1"><a href="">Galeria</a></li>
+			<li class="li1"><a href="">Uniwersa</a></li>
+			<li class="li1"><a href="">Sklep</a></li>
+			<li class="li1"><a href="">Zlecenia</a></li>
+			<li class="li1"><a href="">Kontakt</a></li>
+		</ul>
+        <div class="hamburger">
+            <div class="ham ham1"></div>
+            <div class="ham ham2"></div>
+            <div class="ham ham3"></div>
+        </div>
+        <ul class="mobile">
+			<li class="li"><a href=""> Strona Główna</a></li>
+			<li class="li"><a href="">Aktualności</a></li>
+			<li class="li"><a href="">Galeria</a></li>
+			<li class="li"><a href="">Uniwersa</a></li>
+			<li class="li"><a href="">Sklep</a></li>
+			<li class="li"><a href="">Zlecenia</a></li>
+			<li class="li"><a href="">Kontakt</a></li>
+		</ul>
+    </nav>
+	<main class="content"> 
+		<h2 class="heading">Witamy na naszej stronie</h2>
+	</main>
+	<footer class="footer">
+		&copy; wszelkie prawa zastrzerzone 
+	</footer>
+</div>
+<script>
+	const button = document.querySelector('.hamburger');
+	button.addEventListener('click', function () {
+		document.querySelector('.ham1').classList.toggle('ham1Click');
+		document.querySelector('.ham2').classList.toggle('ham2Click');
+		document.querySelector('.ham3').classList.toggle('ham3Click');
+		document.querySelectorAll('.li').forEach((el) => {el.classList.toggle('liClick');})
+		document.querySelector('.mobile').classList.toggle('mobileClick');
+	});
+</script>
 </body>
 </html>
